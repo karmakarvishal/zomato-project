@@ -1,0 +1,87 @@
+body,html
+{
+
+  height: 100%;
+  font-weight: bold;
+    padding: 0px;
+  overflow:hidden;
+  margin: 0px;
+}
+
+.opt-menu
+ {
+   z-index: 2;
+   opacity: 0.90;
+   margin: 7px;
+   text-align: center;
+   position: relative;
+   width: 30.8%;
+   border-radius: 0px;
+   background: cyan;
+   height: 60.5%;
+   border: 5px solid black;
+}
+
+
+.res-lists
+{
+  overflow-y: scroll;
+  height: 400px;
+}
+h1 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#im-marker
+{
+  height: 210px;
+  margin: auto;
+  width: 202px;
+}
+#mapping
+{
+    position: absolute;
+  z-index: 1;
+    bottom :  0px;
+  height : 99.96%;
+  width: 100%;
+}
+
+
+#h-marker
+ {
+  width: 230px;
+ }
+#head-restaurant
+{
+  margin: 25px;
+  text-align: center;
+}
+#view-places,#unview-places
+{
+  margin-top: 8px;
+    margin-left: 14px;
+  width: 90.4%;
+}
+.res-lists-item:hover
+{
+    background-color: green;
+    color: yellow;
+}
+
+
+@media only screen and (max-width: 728px) {
+
+    .opt-menu
+    {
+
+        overflow-y: scroll;
+                width: 99.97%;
+        height: 199px;
+    }
+    .my_own_data
+    {
+        margin : auto;
+    }
+}

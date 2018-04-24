@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>DELHI</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body >
+<main>
+  <div class="opt-menu BOX" width="180px">
+    <div class="card bg-danger writing text-white" data-bind="visible:googleMapCheck">
+      <div class="card-body body" data-bind="text: googleApiError">
+      </div>
+    </div>
+    <h1 class="heading" >Zomato in Delhi </h1>
+    <div>
+        <input type="button" id="unvew-places" class="btn button btn-danger" value="Hide" data-bind="click: hidePlaces">
+        <input type="button" id="vew-place" class="btn button btn-success" value="Show " data-bind="click:showPlaces">
+       
+    </div>
+    <div data-bind="text:restaurantErrorLabel, visible:resErrorCheck">
+    </div>
+    <h2 id="main-restaurant"><span class="badge badges badge-success">Places Nearby</span></h2>
+    <div class="container datas" >
+        <input type="search" class="form-control controls" data-bind="value: search_item, valueUpdate: 'keyup'" autocomplete="off"><br>
+        <div class="result-lists" data-bind="visible: searchListCheck">
+              <div class="list-group listed" data-bind="foreach: newlist">
+                <div class="res-lists-item" data-bind="text: title,click:clickWindow">
+                </div>
+              </div>
+        </div>
+        <div class="res-lists listed" data-bind="visible: originalListCheck">
+            <div data-bind="foreach: list">
+              <div class="res-lists-item" data-bind="text: title,click: clickWindow">
+              </div>
+            </div>
+        </div>
+ </main>
+      <section>
+         <div id="mapping"></div>
+      </section>
+      <footer><script src="js/lib/knockout.js"></script>
+         <script src="js/apps.js">
+         </script>
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiKrGQ7RXovKaXfK-Tu2ustvKis4DwMaQ&callback=initMap" onerror="google_Maps_Error()">
+         </script>
+       </footer>
+   </body>
+</html>
