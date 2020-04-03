@@ -1,4 +1,4 @@
-#  UDACITY Project ->  Neigbourhood Map
+#  Project ->  Neigbourhood Map
 -> Application for featuring google Maps API.
 
 
